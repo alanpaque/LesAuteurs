@@ -14,7 +14,7 @@ namespace les_auteurs
             InitialiserDatas();
 
             //DEBUT prenom commencant par G
-            var listPrenomG = ListeAuteurs.Where(a => a.Nom.ToUpper().StartsWith("G")).Select(a => a.Prenom);
+            var listPrenomG = ListeAuteurs.Where(a => a.Nom.StartsWith("G")).Select(a => a.Prenom);
             Console.WriteLine("Prénoms commencant par G : ");
             foreach (var prenomG in listPrenomG) {
                 Console.WriteLine(prenomG);
